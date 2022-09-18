@@ -1,9 +1,8 @@
 # reuse_distance
 
 
-
+Set the datasource in line 90 'std::ifstream in("/home/zhiwei2/data_row_2.txt");' 
 Run 'reuse_distance_analysis_tool-master/ScaleTree/analyze.c'  
-Set the datasource in line 90 'std::ifstream in("/home/zhiwei2/data_row_2.txt");'  
 The result is in 'reuse_distance_analysis_tool-master/ScaleTree/result.txt'  
 
 
