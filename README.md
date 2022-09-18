@@ -2,7 +2,7 @@
 
 Run '/ScaleTree/analyze.c'  
 Remember to set the datasource in line 90 'std::ifstream in("/home/zhiwei2/data_row_2.txt");'   
-The result is in '/ScaleTree/result.txt'  
+Remember to set the result address in line _PrintResults("./result_whole.txt");
 
 
 Sample Input:   
