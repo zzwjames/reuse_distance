@@ -10,6 +10,9 @@ Sample Input:
  123524  
  523441  
  562352    
+ ...  
+ ...  
+ ...  
 
 Sample result:  
   Total data is 7202  
