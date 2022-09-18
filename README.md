@@ -1,5 +1,9 @@
 # reuse_distance
 
+1.cd ScaleTree  
+2.make  
+3../analyze  
+
 Run '/ScaleTree/analyze.c'  
 Remember to set the datasource in line 90 'std::ifstream in("/home/zhiwei2/data_row_2.txt");'   
 Remember to set the result address in line 107 '_PrintResults("./result_whole.txt");'  
