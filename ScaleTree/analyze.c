@@ -91,15 +91,15 @@ int main(){
 	std::string filename;
 	std::string line;
 
-  if (in) // 有该文件
+  if (in) 
   {
-      while (getline(in, line)) // line中不包括每行的换行符
+      while (getline(in, line)) 
       {
       //    cout << line << endl;
           _DataAccess(stoi(line));
       }
   }
-  else // 没有该文件
+  else 
   {
       cout << "no such file" << endl;
   }
