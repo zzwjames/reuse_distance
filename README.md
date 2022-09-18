@@ -1,8 +1,14 @@
 # reuse_distance
 
-Run 'reuse_distance_analysis_tool-master/ScaleTree/analyze.c'  
+1.cd ScaleTree  
+2.make  
+3../analyze  
+
+
 Remember to set the datasource in line 90 'std::ifstream in("/home/zhiwei2/data_row_2.txt");'   
-The result is in 'reuse_distance_analysis_tool-master/ScaleTree/result.txt'  
+Remember to set the result address in line 107 '_PrintResults("./result_whole.txt");'  
+'ScaleTree/result.txt' is the result for 10% indices in '/dlrm_datasets/embedding_bag/fbgemm_t856_bs65536_15.pt'  
+'ScaleTree/result_whole.txt' is the result for all indices  
 
 
 Sample Input:   
