@@ -87,7 +87,7 @@ void PrintSize(){
 int main(){
 	HashInitialize();
 	CounterInitialize();
-	std::ifstream in("/home/zhiwei2/data_row_1.txt");
+	std::ifstream in("/home/zhiwei2/last/data.txt");
 	std::string filename;
 	std::string line;
 
