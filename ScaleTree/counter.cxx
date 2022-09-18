@@ -1,5 +1,5 @@
 
-#define NumCounters 10000
+#define NumCounters 100000
 
 #include <assert.h>
 #include <stdio.h>
@@ -18,8 +18,20 @@ extern unsigned numData;
 #define LogLinearSize 10
 int linearSize;    /* size of the linear scale section */
 
-#define CacheBlockNum 20
-unsigned long Addr[20];
+#define CacheBlockNum 6463293
+unsigned long Addr[6463293];
+
+#define CacheBlockNum_1 903090
+unsigned long Addr_1[903090];
+
+#define CacheBlockNum_3 1674167
+unsigned long Addr_3[1674167];
+
+#define CacheBlockNum_7 1384388
+unsigned long Addr_7[1384388];
+
+#define CacheBlockNum_15 1357034
+unsigned long Addr_15[1357034];
 
 #define MAX_UINT 0xffffffff;
 //typedef std::pair<unsigned, unsigned> P;
@@ -28,6 +40,11 @@ typedef std::unordered_map<unsigned long, unsigned> RESULT;
 
 MAP counter;
 RESULT result;
+
+int _PrintResults_1(const char *fileName);
+int _PrintResults_3(const char *fileName);
+int _PrintResults_7(const char *fileName);
+int _PrintResults_15(const char *fileName);
 
 
 int CounterInitialize() {
@@ -72,6 +89,18 @@ void RecordDistance(unsigned dis, unsigned long addr) {
       t++;
       td = td>>1;
     }
+    if(dis==1){
+      Addr_1[counters[t]] = addr;
+    }
+    else if(dis<=3){
+      Addr_3[counters[t]] = addr;
+    }
+    else if(dis<=7){
+      Addr_7[counters[t]] = addr;
+    }
+    else if(dis<=15){
+      Addr_15[counters[t]] = addr;
+    }
     counters[t]++;
    }
   }
@@ -100,15 +129,58 @@ int _PrintResults(const char *fileName) {
 	    sizes[i]-1, counters[i]);
 
   fprintf(histFile," End tree size is %u \n", sizeTrace);
-  //fprintf(histFile,"\n\n Top 20 reuse distance smallest \n");
-  //for(int i = 0; i<CacheBlockNum; i++)
-  //{
-  //  fprintf(histFile," %lu \n", Addr[i]);
-  //}
+  _PrintResults_1("./result_1.txt");
+  _PrintResults_3("./result_3.txt");
+  _PrintResults_7("./result_7.txt");
+  _PrintResults_15("./result_15.txt");
+  // fprintf(histFile,"\n\n Top 20 reuse distance smallest \n");
+  // for(int i = 0; i<CacheBlockNum; i++)
+  // {
+  //   fprintf(histFile," %lu \n", Addr[i]);
+  // }
   fclose(histFile);
   return 0;
 }
-
+int _PrintResults_1(const char *fileName) {
+  histFile = fopen(fileName,"w");
+  for(int i = 0; i<CacheBlockNum_1; i++)
+  {
+    if(Addr_1[i]!=0){
+      fprintf(histFile," %lu \n", Addr_1[i]);
+    }
+  }
+  return 0;
+}
+int _PrintResults_3(const char *fileName) {
+  histFile = fopen(fileName,"w");
+  for(int i = 0; i<CacheBlockNum_3; i++)
+  {
+    if(Addr_3[i]!=0){
+      fprintf(histFile," %lu \n", Addr_3[i]);
+    }
+  }
+  return 0;
+}
+int _PrintResults_7(const char *fileName) {
+  histFile = fopen(fileName,"w");
+  for(int i = 0; i<CacheBlockNum_7; i++)
+  {
+    if(Addr_7[i]!=0){
+      fprintf(histFile," %lu \n", Addr_7[i]);
+    }
+  }
+  return 0;
+}
+int _PrintResults_15(const char *fileName) {
+  histFile = fopen(fileName,"w");
+  for(int i = 0; i<CacheBlockNum_15; i++)
+  {
+    if(Addr_15[i]!=0){
+      fprintf(histFile," %lu \n", Addr_15[i]);
+    }
+  }
+  return 0;
+}
 // void CounterInitialize()
 // {
 //   counter.clear();
