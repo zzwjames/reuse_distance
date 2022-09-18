@@ -4,7 +4,7 @@ Run '/ScaleTree/analyze.c'
 Remember to set the datasource in line 90 'std::ifstream in("/home/zhiwei2/data_row_2.txt");'   
 Remember to set the result address in line 107 '_PrintResults("./result_whole.txt");'  
 'ScaleTree/result.txt' is the result for 10% indices in '/dlrm_datasets/embedding_bag/fbgemm_t856_bs65536_15.pt'  
-'ScaleTree/result_whole.txt' is the result for all indices in '/dlrm_datasets/embedding_bag/fbgemm_t856_bs65536_15.pt'   
+'ScaleTree/result_whole.txt' is the result for all indices in '/dlrm_datasets/embedding_bag/fbgemm_t856_bs65536_15.pt'     
 
 
 Sample Input:   
