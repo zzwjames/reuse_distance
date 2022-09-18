@@ -1,0 +1,32 @@
+ Total data is 19155 
+ Total access is 45980845 
+ Distance 0 	618902
+ Distance 0 to 1 	89286
+ Distance 2 to 3 	165653
+ Distance 4 to 7 	138728
+ Distance 8 to 15 	135459
+ Distance 16 to 31 	112748
+ Distance 32 to 63 	149235
+ Distance 64 to 127 	216237
+ Distance 128 to 255 	320955
+ Distance 256 to 511 	558539
+ Distance 512 to 1023 	881674
+ Distance 1024 to 2047 	1446624
+ Distance 2048 to 3071 	1148211
+ Distance 3072 to 4095 	933893
+ Distance 4096 to 5119 	876794
+ Distance 5120 to 6143 	6611294
+ Distance 6144 to 7167 	15413307
+ Distance 7168 to 8191 	1740828
+ Distance 8192 to 9215 	4465985
+ Distance 9216 to 10239 	2462267
+ Distance 10240 to 11263 	2295937
+ Distance 11264 to 12287 	1748831
+ Distance 12288 to 13311 	1308813
+ Distance 13312 to 14335 	946143
+ Distance 14336 to 15359 	630897
+ Distance 15360 to 16383 	371809
+ Distance 16384 to 17407 	161262
+ Distance 17408 to 18431 	28694
+ Distance 18432 to 19455 	1840
+ End tree size is 4719 
