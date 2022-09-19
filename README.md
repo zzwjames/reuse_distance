@@ -1,17 +1,16 @@
 # reuse_distance
 
-1.cd ScaleTree  
-2.make  
-3../analyze  
+To use the tool, use the following steps
+(1) cd ScaleTree  
+(2) make  
+(3) ./analyze  
 
 
-Remember to set the datasource in line 90 'std::ifstream in("/home/zhiwei2/data_row_2.txt");'   
-Remember to set the result address in line 107 '_PrintResults("./result_whole.txt");'  
-'ScaleTree/result.txt' is the result for 10% indices in '/dlrm_datasets/embedding_bag/fbgemm_t856_bs65536_15.pt'  
-'ScaleTree/result_whole.txt' is the result for all indices  
+You have to 
+(1) manually specify your input file (including your index sequence) at Line 90@analyze.c 'std::ifstream in("your path to your input file");'
+(2) manually specify your output path at Line 107@analyze.c '_PrintResults("your path to your output file");'
 
-
-Sample Input:   
+Example input:   
  116024  
  123524  
  523441  
@@ -20,7 +19,7 @@ Sample Input:
  ...  
  ...  
 
-Sample result:  
+Example output:  
   Total data is 7202  
   Total access is 2798  
   Distance 0     100  
